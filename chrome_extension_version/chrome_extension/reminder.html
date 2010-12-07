@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+  <script src="html5/jquery.min.js" type="text/javascript"></script>
+  <script src="html5/reminder.js" type="text/javascript"></script>
+</head>
+<body onload="init()">
+	<div id="bg">
+		<audio class="music">does not support</audio>
+	</div>
+	<script>
+		function init() {
+			if (webkitNotifications) {
+				if (window.webkitNotifications.checkPermission() > 0) {
+					RequestPermission(notification);
+				}
+			}
+			getOrdersFromServer();
+			setInterval(getOrdersFromServer, DefaultConfig.checkNewIntervaInMinutes * 60 * 1000);
+		}
+	</script>
+</body>
+</html>

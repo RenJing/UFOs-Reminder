@@ -1,0 +1,19 @@
+{
+	"name": "UFO Reminder",
+	"version": "0.1",
+	"description": "UFO Reminder For Chrome",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"popup": "popup.html"
+	},
+	"background_page": "reminder.html",
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"permissions": [
+		"http://10.18.8.73/*",
+		"notifications"
+	]
+}
